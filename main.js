@@ -46,8 +46,10 @@ class Blockchain {
 let rajCoin = new Blockchain();
 rajCoin.addBlock(new Block(1, "02/02/2020", { amount: 4 }));
 rajCoin.addBlock(new Block(2, "03/02/2020", { amount: 10 }));
-rajCoin.chain[1].data = { amount: 100 };
-rajCoin.chain[1].hash = rajCoin.chain[1].calculateHash();
+
+//uncomment to try to tamper with blockchain and see the results.
+// rajCoin.chain[1].data = { amount: 100 };
+// rajCoin.chain[1].hash = rajCoin.chain[1].calculateHash();
 
 console.log("Is chain valid:" + rajCoin.isChainValid());
-// console.log(JSON.stringify(rajCoin));
+console.log(JSON.stringify(rajCoin));
